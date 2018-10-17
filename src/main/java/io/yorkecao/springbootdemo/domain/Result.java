@@ -8,7 +8,7 @@ import lombok.Setter;
  */
 @Getter
 @Setter
-public class ResponseVo {
+public class Result {
     /**
      * 响应码
      */
@@ -22,12 +22,12 @@ public class ResponseVo {
      */
     private Object object;
 
-    public ResponseVo(String code, String message) {
+    public Result(String code, String message) {
         this.code = code;
         this.message = message;
     }
 
-    public ResponseVo(String code, String message, Object object) {
+    public Result(String code, String message, Object object) {
         this.code = code;
         this.message = message;
         this.object = object;
