@@ -14,7 +14,9 @@ public enum ExceptionEnum {
     /**
      * 一般异常
      */
-    ERROR("600", "ERROR");
+    ERROR("4000000", "ERROR"),
+    // 查询异常 01
+    SELECT_ERROR_CAN_NOT_FIND_USER("4000100", "找不到用户！");
 
     private String code;
     private String message;
