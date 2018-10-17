@@ -1,0 +1,8 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/cms
+    username: root
+    password: password
+mybatis:
+  type-aliases-package: io.yorkecao.springbootdemo.domain
+  mapper-locations: classpath:io/yorkecao/springbootdemo/mapper/*.xml
