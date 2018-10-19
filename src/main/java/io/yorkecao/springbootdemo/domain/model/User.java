@@ -1,4 +1,4 @@
-package io.yorkecao.springbootdemo.domain;
+package io.yorkecao.springbootdemo.domain.model;
 
 import lombok.Getter;
 import lombok.Setter;

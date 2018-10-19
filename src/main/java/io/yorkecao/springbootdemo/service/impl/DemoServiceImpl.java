@@ -1,8 +1,8 @@
 package io.yorkecao.springbootdemo.service.impl;
 
-import io.yorkecao.springbootdemo.constants.ExceptionEnum;
-import io.yorkecao.springbootdemo.domain.DemoException;
-import io.yorkecao.springbootdemo.domain.User;
+import io.yorkecao.springbootdemo.constants.ExceptionType;
+import io.yorkecao.springbootdemo.domain.model.DemoException;
+import io.yorkecao.springbootdemo.domain.model.User;
 import io.yorkecao.springbootdemo.mapper.UserMapper;
 import io.yorkecao.springbootdemo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,14 +17,18 @@ import java.util.Optional;
 @Service
 public class DemoServiceImpl implements DemoService {
 
+    private final UserMapper userMapper;
+
     @Autowired
-    private UserMapper userMapper;
+    public DemoServiceImpl(UserMapper userMapper) {
+        this.userMapper = userMapper;
+    }
 
     @Override
     public String sayHello(int id) throws DemoException {
         String name = Optional.ofNullable(userMapper.selectUserById(id))
                 .map(User::getName)
-                .orElseThrow(() -> new DemoException(ExceptionEnum.SELECT_ERROR_CAN_NOT_FIND_USER));
+                .orElseThrow(() -> new DemoException(ExceptionType.SELECT_ERROR_CAN_NOT_FIND_USER));
 
         return "hello, " + name;
     }

@@ -32,4 +32,13 @@ public class Result {
         this.message = message;
         this.object = object;
     }
+
+    @Override
+    public String toString() {
+        return "Result{" +
+                "code='" + code + '\'' +
+                ", message='" + message + '\'' +
+                ", object=" + object +
+                '}';
+    }
 }

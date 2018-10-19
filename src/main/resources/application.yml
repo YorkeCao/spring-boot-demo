@@ -1,8 +1,10 @@
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/cms
+    url: jdbc:mysql://localhost:3306/cms?useSSL=false
     username: root
-    password: password
+    password: arcane004mage
 mybatis:
-  type-aliases-package: io.yorkecao.springbootdemo.domain
+  type-aliases-package: io.yorkecao.springbootdemo.domain.model
   mapper-locations: classpath:io/yorkecao/springbootdemo/mapper/*.xml
+  configuration:
+    map-underscore-to-camel-case: true

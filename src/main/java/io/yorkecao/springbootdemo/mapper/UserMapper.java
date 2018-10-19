@@ -1,6 +1,6 @@
 package io.yorkecao.springbootdemo.mapper;
 
-import io.yorkecao.springbootdemo.domain.User;
+import io.yorkecao.springbootdemo.domain.model.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 

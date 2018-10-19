@@ -6,7 +6,7 @@ import lombok.Getter;
  * @author Yorke
  */
 @Getter
-public enum ExceptionEnum {
+public enum ExceptionType {
     /**
      * 成功
      */
@@ -21,7 +21,7 @@ public enum ExceptionEnum {
     private String code;
     private String message;
 
-    ExceptionEnum(String code, String message) {
+    ExceptionType(String code, String message) {
         this.code = code;
         this.message = message;
     }

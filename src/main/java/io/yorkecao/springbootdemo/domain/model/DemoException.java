@@ -1,6 +1,6 @@
-package io.yorkecao.springbootdemo.domain;
+package io.yorkecao.springbootdemo.domain.model;
 
-import io.yorkecao.springbootdemo.constants.ExceptionEnum;
+import io.yorkecao.springbootdemo.constants.ExceptionType;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -14,9 +14,9 @@ public class DemoException extends RuntimeException {
     private String code;
     private String message;
 
-    public DemoException(ExceptionEnum exceptionEnum) {
-        this.code = exceptionEnum.getCode();
-        this.message = exceptionEnum.getMessage();
+    public DemoException(ExceptionType exceptionType) {
+        this.code = exceptionType.getCode();
+        this.message = exceptionType.getMessage();
     }
 
     @Override

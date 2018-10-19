@@ -1,7 +1,7 @@
 package io.yorkecao.springbootdemo.utils;
 
-import io.yorkecao.springbootdemo.constants.ExceptionEnum;
-import io.yorkecao.springbootdemo.domain.DemoException;
+import io.yorkecao.springbootdemo.constants.ExceptionType;
+import io.yorkecao.springbootdemo.domain.model.DemoException;
 import io.yorkecao.springbootdemo.domain.Result;
 
 /**
@@ -10,23 +10,23 @@ import io.yorkecao.springbootdemo.domain.Result;
 public class ResultUtil {
 
     public static Result success() {
-        return new Result(ExceptionEnum.SUCCESS.getCode(), ExceptionEnum.SUCCESS.getMessage());
+        return new Result(ExceptionType.SUCCESS.getCode(), ExceptionType.SUCCESS.getMessage());
     }
 
     public static Result success(Object object) {
-        return new Result(ExceptionEnum.SUCCESS.getCode(), ExceptionEnum.SUCCESS.getMessage(), object);
+        return new Result(ExceptionType.SUCCESS.getCode(), ExceptionType.SUCCESS.getMessage(), object);
     }
 
     public static Result error() {
-        return new Result(ExceptionEnum.ERROR.getCode(), ExceptionEnum.ERROR.getMessage());
+        return new Result(ExceptionType.ERROR.getCode(), ExceptionType.ERROR.getMessage());
     }
 
     public static Result error(String errorMessage) {
-        return new Result(ExceptionEnum.ERROR.getCode(), errorMessage);
+        return new Result(ExceptionType.ERROR.getCode(), errorMessage);
     }
 
-    public static Result error(ExceptionEnum exceptionEnum) {
-        return new Result(exceptionEnum.getCode(), exceptionEnum.getMessage());
+    public static Result error(ExceptionType exceptionType) {
+        return new Result(exceptionType.getCode(), exceptionType.getMessage());
     }
 
     public static Result error(DemoException demoException) {

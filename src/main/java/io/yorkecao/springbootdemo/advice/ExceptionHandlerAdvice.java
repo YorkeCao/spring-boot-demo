@@ -1,7 +1,6 @@
 package io.yorkecao.springbootdemo.advice;
 
-import io.yorkecao.springbootdemo.domain.DemoException;
-import io.yorkecao.springbootdemo.domain.Result;
+import io.yorkecao.springbootdemo.domain.model.DemoException;
 import io.yorkecao.springbootdemo.utils.ResultUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
@@ -24,7 +23,6 @@ public class ExceptionHandlerAdvice {
 
     @ExceptionHandler(DemoException.class)
     public ResponseEntity handleDemoException(DemoException e) {
-        log.error(e.toString(), e);
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(ResultUtil.error(e));
     }
 }
