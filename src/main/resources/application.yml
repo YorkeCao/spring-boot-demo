@@ -8,3 +8,5 @@ mybatis:
   mapper-locations: classpath:io/yorkecao/springbootdemo/mapper/*.xml
   configuration:
     map-underscore-to-camel-case: true
+spring-boot-demo:
+  name: name

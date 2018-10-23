@@ -1,8 +1,5 @@
 package io.yorkecao.springbootdemo.annotation;
 
-
-import lombok.Getter;
-
 import java.lang.annotation.*;
 
 /**
