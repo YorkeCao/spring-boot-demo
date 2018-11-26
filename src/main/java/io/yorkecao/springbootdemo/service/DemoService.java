@@ -1,6 +1,6 @@
 package io.yorkecao.springbootdemo.service;
 
-import io.yorkecao.springbootdemo.domain.model.DemoException;
+import io.yorkecao.springbootdemo.model.DemoException;
 
 /**
  * @author Yorke

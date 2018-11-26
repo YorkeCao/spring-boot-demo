@@ -3,7 +3,7 @@ package io.yorkecao.springbootdemo.advice;
 import io.yorkecao.springbootdemo.annotation.DemoAction;
 import io.yorkecao.springbootdemo.constants.DemoConstant;
 import io.yorkecao.springbootdemo.constants.ExceptionType;
-import io.yorkecao.springbootdemo.domain.model.DemoLog;
+import io.yorkecao.springbootdemo.model.DemoLog;
 import io.yorkecao.springbootdemo.domain.Result;
 import lombok.extern.slf4j.Slf4j;
 import org.aspectj.lang.JoinPoint;

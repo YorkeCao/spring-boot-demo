@@ -1,6 +1,6 @@
 package io.yorkecao.springbootdemo.advice;
 
-import io.yorkecao.springbootdemo.domain.model.DemoException;
+import io.yorkecao.springbootdemo.model.DemoException;
 import io.yorkecao.springbootdemo.utils.ResultUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;

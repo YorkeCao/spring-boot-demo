@@ -1,8 +1,8 @@
 package io.yorkecao.springbootdemo.service.impl;
 
 import io.yorkecao.springbootdemo.constants.ExceptionType;
-import io.yorkecao.springbootdemo.domain.model.DemoException;
-import io.yorkecao.springbootdemo.domain.model.User;
+import io.yorkecao.springbootdemo.model.DemoException;
+import io.yorkecao.springbootdemo.model.User;
 import io.yorkecao.springbootdemo.mapper.UserMapper;
 import io.yorkecao.springbootdemo.service.DemoService;
 import org.springframework.beans.factory.annotation.Autowired;
